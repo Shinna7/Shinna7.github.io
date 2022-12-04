@@ -1,55 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ES-es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-            <li><a href="#" class="active">Inicio</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Trabajo</a></li>
-            <li><a href="#">Contacto</a></li>
+        <a href="#" class="logo"><img src="imagenes/logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="#">Peliculas</a></li>
+            <li><a href="#">Cuenta</a></li>
+            <li><a href="#">Mi lista</a></li>
         </ul>
+        <div class="search">
+            <input type="text" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
     </header>
-    <section>
-        <img src="stars.png" id="stars">
-        <img src="moon.png" id="moon">
-        <img src="mountains_behind.png" id="montaña">
-        <h2 id="text">Mishel</h2>
-        <a href="#sec" id="btn">Ayuda--</a>
-        <img src="mountains_front.png" id="montaña2">
-    </section>
-    <div class="sec" id="sec">
-        <h2>Sabes como hacer de Comunicación...!</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis suscipit mollitia eius natus quo asperiores consequuntur, fugit repellendusLorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis suscipit mollitia eius natus quo asperiores consequuntur, fugit repellendus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis suscipit mollitia eius natus quo asperiores consequuntur, fugit repellendus?<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis suscipit mollitia eius natus quo asperiores consequuntur, fugit repellendusLorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis susc<br><br>Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis suscipit mollitia eius natus quo asperiores consequuntur, fugit repellendusLorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti,<br><br>Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti, aspernatur mollitia quis animi exercitationem sapiente. Facere reiciendis suscipit mollitia eius natus quo asperiores consequuntur, fugit repellendusLorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius maiores esse voluptates repellendus provident dolorum saepe eveniet similique. Sint culpa facilis deleniti,
-        </p>
+    <div class="banner">
+        <img src="imagenes/bg5.gif" class="bg">
+        <div class="content">
+            <img src="imagenes/name3.png" class="titulopelicula">
+            <br><br>
+            <h4>
+                <span>2015</span>
+                <span><i>12+</i></span>
+                <span>1h 27min</span>
+                <span>Acción</span>
+            </h4>
+            <p>Un día el estudiante Kanbara Akihito descubre a
+                una de sus compañeras, Kuriyama Mirai, a punto
+                de saltar desde la azotea de la escuela. Después
+                de que Akihito intente convencerla, Mirai le 
+                apuñala con una espada hecha de su propia sangre,
+                Tras saber que Mirai es 
+                una Guerrera del Mundo Espiritual y la última 
+                sobreviviente de su clan, las vidas de ambos se 
+                entrelazan para siempre.
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Mi Lista</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="imagenes/play.png">Ver Trailer</a>
     </div>
+
+    <div class="trailer">
+        <video src="kyokai.mp4" controls="true" ></video>
+        <img src="imagenes/close.png" class="close" onclick="toggleVideo();">
+    </div>
+
     <script>
-        let stars = document.getElementById('stars');
-        let moon = document.getElementById('moon');
-        let mountains_behind = document.getElementById('montaña');
-        let text = document.getElementById('text');
-        let btn = document.getElementById('btn');
-        let mountains_front = document.getElementById('montaña2');
-        let header = document.querySelector('header');
-        
-        window.addEventListener('scroll',function(){
-            let value = window.scrollY;
-            stars.style.left = value * 0.25 + 'px';
-            moon.style.top = value * 1.25 + 'px';
-            mountains_behind.style.top = value * 0.5 + 'px';
-            mountains_front.style.top = value * 0 + 'px';
-            text.style.marginRight = value * 4 + 'px';
-            text.style.marginTop = value * 1.5 + 'px';
-            btn.style.marginTop = value * 1.5 + 'px';
-            header.style.Top = value * 0.5 + 'px';
-        })
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
     </script>
 </body>
 </html>
